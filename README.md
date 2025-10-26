@@ -1,31 +1,108 @@
-# Crop Counting AI - Complete Full-Stack Application
+<div align="center">
 
-A comprehensive web application for automated crop counting using YOLOv8 deep learning models. This project includes a React frontend with Tailwind CSS and a Flask backend API that integrates with Python machine learning scripts.
+# 🌾 Crop Counting AI
+
+### Automated Crop Detection & Counting using Deep Learning
+
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.3+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge)](https://github.com/ultralytics/ultralytics)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.0+-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
+A comprehensive full-stack web application for automated crop counting using state-of-the-art YOLOv8 deep learning models. Features a modern React frontend, robust Flask backend API, and powerful Python ML pipeline.
+
+[Features](#-features) •
+[Installation](#%EF%B8%8F-installation--setup) •
+[Usage](#-usage-guide) •
+[API](#-api-endpoints) •
+[Contributing](#-contributing)
+
+</div>
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Installation & Setup](#%EF%B8%8F-installation--setup)
+- [Running the Application](#-running-the-application)
+- [Usage Guide](#-usage-guide)
+- [Configuration](#-configuration)
+- [API Endpoints](#-api-endpoints)
+- [Key Features Explained](#-key-features-explained)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
+
+---
 
 ## 🚀 Features
 
-### Frontend (React + Tailwind CSS)
-- **Dashboard**: Overview with statistics and quick actions
-- **Dataset Upload**: Drag-and-drop file upload with progress tracking
-- **Model Training**: Real-time training interface with configuration options
-- **Model Management**: View, select, and manage trained models
-- **Detection Interface**: Upload images and run crop detection
-- **Results Visualization**: View detection results with statistics
-- **Responsive Design**: Mobile-friendly interface
+### 🎨 Frontend (React + TypeScript + Tailwind CSS)
 
-### Backend (Flask API)
-- **File Upload API**: Handle dataset and image uploads
-- **Training API**: Start and monitor model training processes
-- **Detection API**: Run single image and tile inference
-- **Model Management**: List and manage trained models
-- **Real-time Progress**: WebSocket-like polling for training progress
+- ✅ **Interactive Dashboard** - Real-time statistics and quick actions
+- ✅ **Drag & Drop Upload** - Intuitive dataset and image upload with progress tracking
+- ✅ **Live Training Monitor** - Real-time model training interface with live metrics
+- ✅ **Model Management** - View, compare, and manage all trained models
+- ✅ **Smart Detection** - Upload images and run crop detection with adjustable parameters
+- ✅ **Visual Results** - Beautiful visualization of detection results with statistics
+- ✅ **Fully Responsive** - Mobile-first design that works on all devices
 
-### Machine Learning (Python Scripts)
-- **YOLOv8 Training**: Complete training pipeline with Ultralytics
-- **Single Image Detection**: Fast inference on individual images
-- **Tile Inference**: Process large orthomosaics with tiling
-- **NMS Merging**: Remove duplicate detections across tiles
-- **Evaluation Metrics**: MAE, RMSE, and accuracy calculations
+### ⚙️ Backend (Flask REST API)
+
+- 🔄 **File Upload System** - Robust handling of dataset and image uploads
+- 🚀 **Training Pipeline** - Start, monitor, and manage model training processes
+- 🎯 **Detection Engine** - Single image and tile-based inference
+- 📊 **Model Registry** - Track and manage all trained model versions
+- ⚡ **Real-time Updates** - Live progress tracking for long-running operations
+- 🔒 **Error Handling** - Comprehensive error handling and validation
+
+### 🤖 Machine Learning (YOLOv8 Pipeline)
+
+- 🏋️ **Advanced Training** - Full YOLOv8 training pipeline with hyperparameter tuning
+- 🖼️ **Single Image Inference** - Fast detection on individual images
+- 🗺️ **Large Image Processing** - Tile-based inference for orthomosaics and large images
+- 🔗 **Smart Merging** - NMS-based detection merging across tile boundaries
+- 📈 **Comprehensive Metrics** - MAE, RMSE, accuracy, precision, and recall calculations
+- 💾 **Model Versioning** - Automatic experiment tracking and model management
+
+---
+
+## 🛠️ Tech Stack
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+### Frontend
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/-Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+
+</td>
+<td align="center" width="33%">
+
+### Backend
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Flask-CORS](https://img.shields.io/badge/-Flask--CORS-000000?style=flat-square&logo=flask&logoColor=white)
+
+</td>
+<td align="center" width="33%">
+
+### Machine Learning
+![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/-YOLOv8-00FFFF?style=flat-square)
+![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+
+</td>
+</tr>
+</table>
 
 ## 📁 Project Structure
 
@@ -59,116 +136,179 @@ crop-counting-ai/
 
 ## 🛠️ Installation & Setup
 
-### Prerequisites
-- Node.js (v16 or higher)
-- Python 3.8+
-- CUDA (optional, for GPU training)
+### 📋 Prerequisites
 
-### 1. Clone and Setup
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v16 or higher) - [Download](https://nodejs.org/)
+- **Python** 3.8+ - [Download](https://www.python.org/)
+- **Git** - [Download](https://git-scm.com/)
+- **CUDA** (optional, for GPU training) - [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads)
+
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone <repository-url>
-cd crop-counting-ai
+git clone https://github.com/LexData-Labs/crop_counting.git
+cd crop_counting
 ```
 
-### 2. Install Dependencies
+### 2️⃣ Install Dependencies
 
-#### Frontend Dependencies
+<details>
+<summary><b>Frontend Setup</b></summary>
+
 ```bash
 cd frontend
 npm install
 ```
 
-#### Backend Dependencies
+Create a `.env.local` file:
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+</details>
+
+<details>
+<summary><b>Backend Setup</b></summary>
+
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
 
-#### Python ML Dependencies
+</details>
+
+<details>
+<summary><b>Python ML Scripts Setup</b></summary>
+
 ```bash
-# Activate virtual environment (recommended)
+# Create and activate virtual environment (recommended)
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
 
 # Install ML dependencies
 pip install -r requirements.txt
 ```
 
-### 3. Environment Setup
+</details>
 
-Create a `.env.local` file in the frontend directory:
-```env
-REACT_APP_API_URL=http://localhost:5000/api
+### 3️⃣ Dataset Configuration
+
+Ensure your dataset follows the YOLO format:
+
+```
+data/
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── labels/
+│   ├── train/
+│   ├── val/
+│   └── test/
+└── dataset.yaml
 ```
 
 ## 🚀 Running the Application
 
-### Development Mode (Recommended)
+### 🔧 Development Mode
 
-#### Option 1: Run Everything Together
-```bash
-# Install concurrently for running both servers
-npm install -g concurrently
+You can run the frontend and backend separately in different terminals:
 
-# Start both frontend and backend
-npm run start-dev
-```
-
-#### Option 2: Run Separately
-
-**Terminal 1 - Backend:**
+**Terminal 1 - Start Backend Server:**
 ```bash
 cd backend
 python app.py
 ```
+> 🌐 Backend will run on `http://localhost:5000`
 
-**Terminal 2 - Frontend:**
+**Terminal 2 - Start Frontend:**
 ```bash
 cd frontend
 npm start
 ```
+> 🌐 Frontend will run on `http://localhost:3000`
 
-### Production Mode
+### 🚢 Production Mode
+
 ```bash
 # Build frontend
+cd frontend
 npm run build
 
-# Serve frontend (using a static server)
-# Backend runs on port 5000
+# The build folder can be served with any static file server
+# Backend continues to run on port 5000
 ```
+
+### ✅ Verify Installation
+
+Once both servers are running, navigate to `http://localhost:3000` and you should see the dashboard!
 
 ## 📖 Usage Guide
 
-### 1. Dataset Preparation
-1. Go to **Dataset Upload** page
-2. Upload images in `data/images/train/`, `data/images/val/`, `data/images/test/`
-3. Upload corresponding YOLO label files in `data/labels/train/`, `data/labels/val/`, `data/labels/test/`
-4. Ensure `data/dataset.yaml` is properly configured
+### 1️⃣ Dataset Preparation
 
-### 2. Model Training
-1. Go to **Training** page
+1. Navigate to the **Dataset Upload** page
+2. Organize your data in YOLO format:
+   - Images: `data/images/{train,val,test}/`
+   - Labels: `data/labels/{train,val,test}/`
+3. Upload your dataset through the interface or directly to the folders
+4. Verify `data/dataset.yaml` configuration
+
+**Example `dataset.yaml`:**
+```yaml
+path: ./data
+train: images/train
+val: images/val
+test: images/test
+nc: 1  # number of classes
+names: ['crop']
+```
+
+### 2️⃣ Model Training
+
+1. Navigate to the **Training** page
 2. Configure training parameters:
-   - Model architecture (YOLOv8n/s/m/l/x)
-   - Number of epochs
-   - Batch size
-   - Image size
-   - Learning rate
-   - Device (GPU/CPU)
-3. Click **Start Training**
-4. Monitor progress in real-time
 
-### 3. Model Management
-1. Go to **Models** page
-2. View all trained models with metrics
-3. Select active model for detection
-4. Download or delete models as needed
+   | Parameter | Description | Recommended |
+   |-----------|-------------|-------------|
+   | Model Architecture | YOLOv8n/s/m/l/x | YOLOv8n for speed, YOLOv8x for accuracy |
+   | Epochs | Training iterations | 100-300 |
+   | Batch Size | Images per batch | 8-16 (GPU dependent) |
+   | Image Size | Input resolution | 640 or 1280 |
+   | Learning Rate | Step size | 0.01 (default) |
+   | Device | GPU/CPU | GPU recommended |
 
-### 4. Crop Detection
-1. Go to **Detection** page
-2. Select trained model and configure parameters
-3. Upload images for detection
-4. Click **Start Detection**
-5. View results with crop counts and confidence scores
+3. Click **Start Training** and monitor progress in real-time
+4. View training metrics, loss curves, and validation results
+
+### 3️⃣ Model Management
+
+1. Navigate to the **Models** page
+2. View all trained models with performance metrics
+3. Select the best model for deployment
+4. Download model weights or delete unused models
+
+### 4️⃣ Crop Detection
+
+1. Navigate to the **Detection** page
+2. Select your trained model
+3. Configure detection parameters:
+   - **Confidence Threshold**: Minimum detection confidence (default: 0.25)
+   - **IoU Threshold**: NMS threshold (default: 0.45)
+4. Upload image(s) for detection
+5. Click **Start Detection**
+6. View results with:
+   - Annotated images with bounding boxes
+   - Total crop count
+   - Individual confidence scores
+   - Detection statistics
 
 ## 🔧 Configuration
 
@@ -188,99 +328,244 @@ npm run build
 
 ## 📊 API Endpoints
 
-### Health Check
-- `GET /api/health` - Check API status
+### Health & Status
+```http
+GET /api/health
+```
+> Check API server status and availability
 
-### File Upload
-- `POST /api/upload` - Upload dataset files
+### File Management
+```http
+POST /api/upload
+Content-Type: multipart/form-data
+```
+> Upload dataset files (images and labels)
 
-### Training
-- `POST /api/training/start` - Start model training
-- `GET /api/training/status/<id>` - Get training status
+### Training Operations
+```http
+POST /api/training/start
+Content-Type: application/json
+{
+  "model": "yolov8n",
+  "epochs": 100,
+  "batch_size": 16,
+  "img_size": 640
+}
+```
+> Start a new training job
 
-### Models
-- `GET /api/models` - List trained models
+```http
+GET /api/training/status/<training_id>
+```
+> Get real-time training progress and metrics
 
-### Detection
-- `POST /api/detection/single` - Single image detection
-- `POST /api/detection/tile` - Tile inference for large images
+### Model Management
+```http
+GET /api/models
+```
+> List all trained models with metadata and metrics
+
+### Detection & Inference
+```http
+POST /api/detection/single
+Content-Type: multipart/form-data
+```
+> Run detection on a single image
+
+```http
+POST /api/detection/tile
+Content-Type: multipart/form-data
+{
+  "tile_size": 1280,
+  "overlap": 200,
+  "merge_iou": 0.5
+}
+```
+> Process large orthomosaic images using tile-based inference
 
 ## 🎯 Key Features Explained
 
-### Tiling Inference
-For large orthomosaic images, the system automatically:
-1. Divides the image into overlapping tiles
-2. Runs detection on each tile
-3. Converts tile coordinates to global coordinates
-4. Merges overlapping detections using NMS
+### 🗺️ Tiling Inference for Large Images
 
-### Real-time Training Monitoring
-- Live progress updates every 5 seconds
-- Loss and accuracy tracking
-- Estimated time remaining
-- Automatic completion detection
+Processing large orthomosaic images (e.g., drone imagery) requires special handling:
 
-### Responsive Design
-- Mobile-first approach
-- Touch-friendly interface
-- Adaptive layouts for all screen sizes
+```
+┌─────────────────────────────────┐
+│    Large Orthomosaic Image      │
+│  ┌────┬────┬────┬────┬────┐     │
+│  │ T1 │ T2 │ T3 │ T4 │ T5 │     │  1. Split into overlapping tiles
+│  ├────┼────┼────┼────┼────┤     │
+│  │ T6 │ T7 │ T8 │ T9 │ T10│     │  2. Run detection on each tile
+│  ├────┼────┼────┼────┼────┤     │
+│  │ T11│ T12│ T13│ T14│ T15│     │  3. Convert coordinates to global
+│  └────┴────┴────┴────┴────┘     │
+│                                  │  4. Merge detections using NMS
+└─────────────────────────────────┘
+```
+
+**Benefits:**
+- ✅ Process images larger than GPU memory
+- ✅ Maintain high detection accuracy
+- ✅ Eliminate duplicate detections at tile boundaries
+- ✅ Scalable to any image size
+
+### ⚡ Real-time Training Monitoring
+
+Track your model training with live updates:
+- 📊 **Live Metrics**: Loss, accuracy, precision, recall
+- ⏱️ **Progress Tracking**: Current epoch, ETA, time elapsed
+- 📈 **Visualization**: Training and validation curves
+- 🔔 **Notifications**: Completion alerts
+
+### 📱 Responsive Design
+
+Built with mobile-first approach:
+- 💻 **Desktop**: Full-featured dashboard with multi-column layouts
+- 📱 **Tablet**: Optimized touch interface
+- 📞 **Mobile**: Streamlined single-column view
+- 🎨 **Dark Mode Ready**: Modern UI with Tailwind CSS
 
 ## 🐛 Troubleshooting
 
-### Common Issues
+### ❌ Common Issues & Solutions
 
-1. **Import errors in Python scripts**
-   - Ensure virtual environment is activated
-   - Install all requirements: `pip install -r requirements.txt`
+<details>
+<summary><b>Import errors in Python scripts</b></summary>
 
-2. **Frontend not connecting to backend**
-   - Check if backend is running on port 5000
-   - Verify `REACT_APP_API_URL` in `.env.local`
+**Problem**: `ModuleNotFoundError` or import errors
 
-3. **Training fails to start**
-   - Check if dataset files are properly uploaded
-   - Verify `data/dataset.yaml` exists and is valid
+**Solution**:
+```bash
+# Ensure virtual environment is activated
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate     # Windows
 
-4. **Detection returns no results**
-   - Check confidence threshold settings
-   - Ensure model weights file exists
-   - Verify image format is supported
+# Reinstall all dependencies
+pip install -r requirements.txt
+```
 
-### Performance Tips
+</details>
 
-1. **GPU Training**: Use CUDA-enabled PyTorch for faster training
-2. **Batch Size**: Increase batch size if you have more GPU memory
-3. **Image Size**: Larger images provide better accuracy but slower processing
-4. **Tile Size**: Larger tiles reduce processing time but may miss small objects
+<details>
+<summary><b>Frontend not connecting to backend</b></summary>
 
-## 🤝 Contributing
+**Problem**: API connection errors or CORS issues
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+**Solution**:
+1. Verify backend is running on `http://localhost:5000`
+2. Check `.env.local` has correct API URL:
+   ```env
+   REACT_APP_API_URL=http://localhost:5000/api
+   ```
+3. Ensure Flask-CORS is installed: `pip install flask-cors`
 
-## 📄 License
+</details>
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+<details>
+<summary><b>Training fails to start</b></summary>
 
-## 🙏 Acknowledgments
+**Problem**: Training won't begin or crashes immediately
 
-- [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) for the detection framework
-- [React](https://reactjs.org/) for the frontend framework
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Flask](https://flask.palletsprojects.com/) for the backend API
+**Solution**:
+1. Verify `data/dataset.yaml` exists and is properly formatted
+2. Check that dataset folders contain images and labels
+3. Ensure YOLO format labels are correct (class x_center y_center width height)
+4. Verify sufficient disk space for model checkpoints
 
-## 📞 Support
+</details>
 
-For support and questions:
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the documentation
+<details>
+<summary><b>Detection returns no results</b></summary>
+
+**Problem**: No crops detected in images
+
+**Solution**:
+1. Lower confidence threshold (try 0.1-0.3)
+2. Verify model weights file exists in `models/` directory
+3. Check image format is supported (jpg, png, jpeg)
+4. Ensure model was trained on similar data
+
+</details>
+
+<details>
+<summary><b>CUDA out of memory errors</b></summary>
+
+**Problem**: GPU memory errors during training
+
+**Solution**:
+1. Reduce batch size (try 8 or 4)
+2. Reduce image size (try 640 instead of 1280)
+3. Use a smaller model (yolov8n instead of yolov8x)
+4. Clear GPU cache: `torch.cuda.empty_cache()`
+
+</details>
+
+### ⚡ Performance Tips
+
+| Aspect | Recommendation | Impact |
+|--------|----------------|--------|
+| **GPU Training** | Use CUDA-enabled PyTorch | 10-50x faster training |
+| **Batch Size** | Increase based on GPU memory | Faster training, better gradient estimates |
+| **Image Size** | 640 for speed, 1280 for accuracy | Accuracy vs speed tradeoff |
+| **Tile Size** | 1024-1280 for large images | Balance between speed and edge detection |
+| **Model Selection** | YOLOv8n for real-time, YOLOv8x for accuracy | Speed vs accuracy tradeoff |
 
 ---
 
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+
+- Follow existing code style and conventions
+- Write clear commit messages
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass before submitting PR
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+This project is built with amazing open-source technologies:
+
+- **[Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)** - State-of-the-art object detection
+- **[React](https://reactjs.org/)** - Modern UI library
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Flask](https://flask.palletsprojects.com/)** - Lightweight Python web framework
+- **[PyTorch](https://pytorch.org/)** - Deep learning framework
+
+## 📞 Support & Contact
+
+Need help? Here's how to get support:
+
+- 📫 **Issues**: [Create an issue](https://github.com/LexData-Labs/crop_counting/issues)
+- 📖 **Documentation**: Check the sections above
+- 💬 **Discussions**: Start a [discussion](https://github.com/LexData-Labs/crop_counting/discussions)
+
+## 🌟 Star History
+
+If this project helped you, please consider giving it a ⭐!
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [LexData Labs](https://github.com/LexData-Labs)**
+
 **Happy Crop Counting! 🌱🤖**
-#   c r o p _ c o u n t i n g  
- 
+
+[![GitHub Stars](https://img.shields.io/github/stars/LexData-Labs/crop_counting?style=social)](https://github.com/LexData-Labs/crop_counting)
+[![GitHub Forks](https://img.shields.io/github/forks/LexData-Labs/crop_counting?style=social)](https://github.com/LexData-Labs/crop_counting/fork)
+
+</div>
