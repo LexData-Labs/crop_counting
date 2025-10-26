@@ -5,3 +5,4 @@ uploads/
 models/experiments/**/weights/*.pt
 *.pyc
 .DS_Store
+backend/*.pt
