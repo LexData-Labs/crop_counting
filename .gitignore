@@ -1,0 +1,7 @@
+__pycache__/
+.pt
+venv/
+uploads/
+models/experiments/**/weights/*.pt
+*.pyc
+.DS_Store

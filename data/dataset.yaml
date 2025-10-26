@@ -1,0 +1,7 @@
+train: D:\New folder\liitle\2\dataset\images\train
+val: D:\New folder\liitle\2\dataset\images\val
+test: D:\New folder\liitle\2\dataset\images\test
+
+# number of classes (10 crop types)
+nc: 10
+names: ['diente_leon', 'kikuyo', 'lengua_vaca', 'otros', 'papa', 'tobacco', 'rices', 'seedling', 'rice', 'sun']
